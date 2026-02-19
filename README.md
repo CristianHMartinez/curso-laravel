@@ -1,40 +1,26 @@
-# Curso Laravel - SSPM
+# Sesion 4: Laravel pre-instalado
 
-Repositorio de entornos de desarrollo para el curso de Laravel.
+Este entorno viene con Laravel 12 ya instalado y configurado. Usalo si tuviste problemas con la instalacion manual.
 
-## Como usar este repositorio
+## Que incluye
 
-Cada sesion tiene su propia rama con un entorno de desarrollo listo para usar.
+- PHP 8.2 + Composer + Node.js 20
+- Laravel 12 instalado
+- SQLite configurado
+- Migraciones ejecutadas
 
-### Opcion 1: GitHub Codespaces (recomendada)
+## Como usarlo
 
-1. Ve a la rama de la sesion que necesitas (ejemplo: `sesion4`)
-2. Click en **Code** > **Codespaces** > **Create codespace on sesion4**
-3. Espera a que se configure el entorno (~2 minutos)
-4. Listo. Tienes VS Code en el navegador con todo funcionando
-
-### Opcion 2: VS Code + Docker (local)
-
-1. Clona el repositorio y cambia a la rama de la sesion:
+1. Espera a que el entorno termine de configurarse
+2. Inicia el servidor:
    ```bash
-   git clone <url-del-repo>
-   cd curso-laravel-sspm
-   git checkout sesion4
+   php artisan serve --host=0.0.0.0
    ```
-2. Abre la carpeta en VS Code
-3. Cuando aparezca "Reopen in Container", acepta
-4. Espera a que se configure el entorno
+3. Abre `localhost:8000` en el navegador
 
-## Ramas disponibles
+## Quieres hacer la instalacion manual?
 
-| Rama | Descripcion |
-|------|-------------|
-| `main` | Este README |
-| `sesion4` | Sesion 4: Primer hands-on con Laravel (entorno desde cero) |
-| `sesion4-completo` | Sesion 4: Entorno con Laravel ya instalado (fallback) |
-
-## Notas
-
-- Cada Codespace es independiente. Tus cambios no afectan a otros estudiantes.
-- Si necesitas empezar de cero, elimina tu Codespace y crea uno nuevo.
-- Las sesiones futuras se agregaran como nuevas ramas.
+Cambia a la rama `sesion4`:
+```bash
+# O crea un nuevo Codespace desde la rama sesion4
+```
