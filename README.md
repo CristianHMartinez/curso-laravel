@@ -1,40 +1,40 @@
-# Curso Laravel - SSPM
+# Sesion 4: Primer hands-on con Laravel
 
-Repositorio de entornos de desarrollo para el curso de Laravel.
+En este entorno vamos a instalar y configurar Laravel desde cero.
 
-## Como usar este repositorio
+## Que tiene este entorno
 
-Cada sesion tiene su propia rama con un entorno de desarrollo listo para usar.
+- PHP 8.2
+- Composer
+- Node.js 20
+- SQLite
 
-### Opcion 1: GitHub Codespaces (recomendada)
+## Que vamos a hacer
 
-1. Ve a la rama de la sesion que necesitas (ejemplo: `sesion4`)
-2. Click en **Code** > **Codespaces** > **Create codespace on sesion4**
-3. Espera a que se configure el entorno (~2 minutos)
-4. Listo. Tienes VS Code en el navegador con todo funcionando
-
-### Opcion 2: VS Code + Docker (local)
-
-1. Clona el repositorio y cambia a la rama de la sesion:
+1. Instalar Laravel:
    ```bash
-   git clone <url-del-repo>
-   cd curso-laravel-sspm
-   git checkout sesion4
+   composer create-project laravel/laravel:^12.0 .
    ```
-2. Abre la carpeta en VS Code
-3. Cuando aparezca "Reopen in Container", acepta
-4. Espera a que se configure el entorno
 
-## Ramas disponibles
+2. Configurar la base de datos (SQLite):
+   ```bash
+   touch database/database.sqlite
+   ```
+   Editar `.env` y cambiar `DB_CONNECTION=sqlite`
 
-| Rama | Descripcion |
-|------|-------------|
-| `main` | Este README |
-| `sesion4` | Sesion 4: Primer hands-on con Laravel (entorno desde cero) |
-| `sesion4-completo` | Sesion 4: Entorno con Laravel ya instalado (fallback) |
+3. Ejecutar migraciones:
+   ```bash
+   php artisan migrate
+   ```
 
-## Notas
+4. Iniciar el servidor:
+   ```bash
+   php artisan serve --host=0.0.0.0
+   ```
 
-- Cada Codespace es independiente. Tus cambios no afectan a otros estudiantes.
-- Si necesitas empezar de cero, elimina tu Codespace y crea uno nuevo.
-- Las sesiones futuras se agregaran como nuevas ramas.
+## Si algo falla
+
+Cambia a la rama `sesion4-completo` que tiene todo pre-instalado:
+```bash
+# O crea un nuevo Codespace desde la rama sesion4-completo
+```
