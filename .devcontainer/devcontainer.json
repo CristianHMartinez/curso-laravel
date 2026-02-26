@@ -28,7 +28,7 @@
   "portsAttributes": {
     "8000": {
       "label": "Laravel Dev Server",
-      "onAutoForward": "openBrowser"
+      "onAutoForward": "notify"
     }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",

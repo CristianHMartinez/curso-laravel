@@ -54,6 +54,11 @@ else
     touch database/database.sqlite
 
     sed -i 's/DB_CONNECTION=.*/DB_CONNECTION=sqlite/' .env
+    sed -i '/^#.*DB_HOST/d' .env
+    sed -i '/^#.*DB_PORT/d' .env
+    sed -i '/^#.*DB_DATABASE/d' .env
+    sed -i '/^#.*DB_USERNAME/d' .env
+    sed -i '/^#.*DB_PASSWORD/d' .env
     sed -i '/^DB_HOST=/d' .env
     sed -i '/^DB_PORT=/d' .env
     sed -i '/^DB_DATABASE=/d' .env
