@@ -13,12 +13,15 @@ Este entorno viene con un **Directorio de Empleados** ya funcionando con datos h
 ## Como usarlo
 
 1. Espera a que el entorno termine de configurarse
-2. Inicia el servidor:
-   ```bash
-   php artisan serve --host=0.0.0.0
-   ```
-3. Abre `localhost:8000` en el navegador
-4. Navega a `/directorio` — veras el listado de empleados
+2. El servidor se inicia automaticamente
+3. Codespace abrira una pestana con la aplicacion
+4. Si no se abre, ve a la pestana **PORTS** y haz clic en el puerto 8000
+5. Navega a `/directorio` para ver el listado de empleados
+
+> **Nota:** Si necesitas reiniciar el servidor manualmente:
+> ```bash
+> php artisan serve --host=0.0.0.0
+> ```
 
 ## Que haremos hoy
 

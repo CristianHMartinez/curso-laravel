@@ -32,5 +32,5 @@
     }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "echo '✅ Entorno listo — escribe: php artisan serve --host=0.0.0.0'"
+  "postStartCommand": "php artisan serve --host=0.0.0.0 > /dev/null 2>&1 &"
 }
