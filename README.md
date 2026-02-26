@@ -1,13 +1,14 @@
-# Sesion 4: Laravel pre-instalado
+# Sesion 7: Base de datos y Eloquent
 
-Este entorno viene con Laravel 12 ya instalado y configurado. Usalo si tuviste problemas con la instalacion manual.
+Este entorno viene con un **Directorio de Empleados** ya funcionando con datos hardcoded en el controller. Hoy lo migraremos a una base de datos real.
 
 ## Que incluye
 
 - PHP 8.2 + Composer + Node.js 20
-- Laravel 12 instalado
-- SQLite configurado
-- Migraciones ejecutadas
+- Laravel 12 con SQLite configurado
+- Controller con datos de ejemplo (array)
+- 4 vistas con estilos: index, show, create, edit
+- Rutas individuales configuradas
 
 ## Como usarlo
 
@@ -17,10 +18,21 @@ Este entorno viene con Laravel 12 ya instalado y configurado. Usalo si tuviste p
    php artisan serve --host=0.0.0.0
    ```
 3. Abre `localhost:8000` en el navegador
+4. Navega a `/directorio` — veras el listado de empleados
 
-## Quieres hacer la instalacion manual?
+## Que haremos hoy
 
-Cambia a la rama `sesion4`:
-```bash
-# O crea un nuevo Codespace desde la rama sesion4
-```
+1. Crear una **migracion** para la tabla `empleados`
+2. Crear un **modelo** Eloquent
+3. Modificar el **controller** para usar Eloquent en vez del array
+4. Simplificar las rutas con `Route::resource`
+
+## Archivos importantes
+
+| Archivo | Que es |
+|---------|--------|
+| `app/Http/Controllers/DirectorioController.php` | Controller con array hardcoded |
+| `routes/web.php` | Rutas individuales |
+| `resources/views/directorio/*.blade.php` | Las 4 vistas |
+| `database/migrations/` | Aqui crearas tu migracion |
+| `app/Models/` | Aqui crearas tu modelo |

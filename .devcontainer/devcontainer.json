@@ -1,5 +1,5 @@
 {
-  "name": "Laravel 12 Completo — Sesión 4",
+  "name": "Laravel — Sesion 7: BD y Eloquent",
   "image": "mcr.microsoft.com/devcontainers/php:8.2-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
@@ -22,7 +22,7 @@
     "XDEBUG_MODE": "off"
   },
   "mounts": [
-    "source=sesion4-completo-vendor,target=${containerWorkspaceFolder}/vendor,type=volume"
+    "source=sesion7-vendor,target=${containerWorkspaceFolder}/vendor,type=volume"
   ],
   "forwardPorts": [8000],
   "portsAttributes": {
@@ -32,5 +32,5 @@
     }
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "echo '✅ Entorno Laravel listo — escribe: php artisan serve --host=0.0.0.0'"
+  "postStartCommand": "echo '✅ Entorno listo — escribe: php artisan serve --host=0.0.0.0'"
 }
